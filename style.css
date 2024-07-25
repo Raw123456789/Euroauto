@@ -1,0 +1,197 @@
+*{
+   
+    box-sizing:border-box;
+    padding:0px;
+    margin:0px;
+    }
+.container{
+    width: 100%;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    margin: 0 -50px;
+    padding: 0 50px;
+}
+.Car1{
+    color: #00439b;
+    margin: 250px 30px 20px;
+    font: bold;
+    font-family: sans-serif;
+}
+.Car2{
+    margin: 250px 30px 20px;
+    color: #00439b;
+}
+.Car3{
+    margin: 250px 30px 20px;
+    color: #00439b;
+}
+.MainPage{
+    width: 100%;
+    background: #ffffff;
+    margin:  250px 30px 20px;
+    padding: 4px 30px 70px;
+    
+}
+.EuroAuto{
+    background: linear-gradient(#030303, #940202);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+#Euro__logo{
+    background-color: rgb(255, 255, 255);
+    background-image: linear-gradient(to top, #006cf8 0%, rgb(248, 248, 244) 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    
+}
+.Navbar-items{
+    Justify-content:space-between;
+    width: 100%;
+}
+.fa-gem{
+    margin-right: 0.5rem;
+}
+
+.Eurobar__menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+.Eurobar__item{
+    height: 80px;
+}
+.Eurobar__links{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #006cf8;
+    color: #fff;
+}
+.button:hover {
+    background: #00439b;
+    transition: all 0.3s ease;
+}
+.Eurobar__links:hover{
+    color: #2380fa;
+    transition: all 0.3s ease;
+}
+@media screen and (max-width: 960px) {
+    .container{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        padding: 0;
+    }
+
+    .Eurobar__menu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+
+    }
+
+    .Eurobar__menu.active{
+        background: #030303;
+        top: 100;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+    #Euro__logo{
+        padding-left: 25px;
+    }
+    .Euro__toggle{
+        width: 25px;
+        height: 5px;
+        margin: 20px 5px;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+    .Eurobar__item{
+        width: 100%;
+    }
+    .Eurobar__links{
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+    #mobile-menu{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 80px;
+        margin: 0;
+    }
+    .Euro__toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+    #mobile-menu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    #mobile-menu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    @media only screen and (max-width: 2000px){
+        .EuroAuto{
+            height: 80px;
+            width: 100%;
+        }
+    }
+}
